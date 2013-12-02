@@ -8,12 +8,21 @@ import com.google.appengine.api.datastore.Entity;
 
 
 public class User {
-	DatastoreService datastore = DatastoreServiceFactory.getDatastoreService();
-	public User(ArrayList<String> attributes){
-		if (attributes.isEmpty()) return ;
+	DatastoreService datastore;
+	public User(){
+		datastore = DatastoreServiceFactory.getDatastoreService();
+	}
+	public boolean createUser(ArrayList<String> attributes){
+		if (attributes.isEmpty()) return false;
+		try{
 		Entity User = new Entity("User",attributes.get(0));
-		User.setProperty("userName", attributes.get(1));
-		User.setProperty("passWord", attributes.get(2));
+		User.setProperty("passWord", attributes.get(1));
 		datastore.put(User);
+		System.out.println(attributes.get(0)+" was created");
+		return true;
+		}
+		catch (Exception e){
+			return false;
+		}
 	}
 }	

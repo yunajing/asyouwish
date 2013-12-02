@@ -1,0 +1,39 @@
+.cover{
+position:fixed;
+width:100%;
+height:100%;
+z-index:150;
+left:0;
+top:50px;
+text-align: center;
+background-color:#000000;
+opacity:0.5;
+}
+
+.help{
+  border: 1px solid black;
+  padding: 0; margin: auto;
+  background-color: black;
+  margin: auto; display: block;
+}
+
+.content {
+	position:absolute;
+	top:0;
+	bottom:0;
+	left:0;
+	right:0;
+	margin:auto;
+	height:240px;
+	width:70%;
+}
+
+.imgcover{
+position:fixed;
+width:100%;
+height:100%;
+z-index:150;
+left:0;
+top:50px;
+text-align: center;
+}
