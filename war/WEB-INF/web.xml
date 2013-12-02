@@ -17,13 +17,14 @@
   </servlet-mapping>
   
   <servlet>
-    <servlet-name>CreateUser</servlet-name>
-    <servlet-class>asyouwish.servlet.CreateuserServlet</servlet-class>
+    <description></description>
+    <display-name>CreateuserServlet</display-name>
+    <servlet-name>CreateuserServlet</servlet-name>
+    <servlet-class>servlet.CreateuserServlet</servlet-class>
   </servlet>
-  
   <servlet-mapping>
-    <servlet-name>CreateUser</servlet-name>
-    <url-pattern>/asyouwish</url-pattern>
+    <servlet-name>CreateuserServlet</servlet-name>
+    <url-pattern>/CreateuserServlet</url-pattern>
   </servlet-mapping>
   
   
