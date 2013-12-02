@@ -16,6 +16,17 @@
     <url-pattern>/asyouwish/greet</url-pattern>
   </servlet-mapping>
   
+  <servlet>
+    <servlet-name>CreateUser</servlet-name>
+    <servlet-class>asyouwish.servlet.CreateuserServlet</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+    <servlet-name>CreateUser</servlet-name>
+    <url-pattern>/asyouwish</url-pattern>
+  </servlet-mapping>
+  
+  
   <!-- Default page to serve -->
   <welcome-file-list>
     <welcome-file>Asyouwish.html</welcome-file>
