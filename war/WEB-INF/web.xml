@@ -16,7 +16,16 @@
     <url-pattern>/asyouwish/greet</url-pattern>
   </servlet-mapping>
   
-  
+  <servlet>
+    <description></description>
+    <display-name>CreateuserServlet</display-name>
+    <servlet-name>CreateuserServlet</servlet-name>
+    <servlet-class>servlet.CreateuserServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>CreateuserServlet</servlet-name>
+    <url-pattern>/CreateuserServlet</url-pattern>
+  </servlet-mapping>
   
   
   <!-- Default page to serve -->

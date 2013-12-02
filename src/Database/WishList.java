@@ -2,41 +2,26 @@ package Database;
 
 import java.util.ArrayList;
 
+import com.google.appengine.api.datastore.DatastoreService;
+import com.google.appengine.api.datastore.DatastoreServiceFactory;
+import com.google.appengine.api.datastore.Entity;
+
 public class WishList {
-	private String userID;
-	private String wishID;
-	private String contentID;
+	 String userID;
+	 String wishID;
+	 String contentID;	
+	 DatastoreService datastore = DatastoreServiceFactory.getDatastoreService();
+
 	public WishList(ArrayList<String> attr) {
 		if(attr.size()!=3){
 			System.out.println("incorrect input");
 		}else{
+			Entity list = new Entity("WishList", attr.get(0));
+
 			userID = attr.get(0);
 			wishID = attr.get(1);
-			contentID = attr.get(2);		
+			contentID = attr.get(2);	
+			datastore.put(list);
 		}
-	}
-	
-	public void setUserID(String userID){
-		this.userID = userID;
-	}
-	
-	public void setWishID(String wishID){
-		this.wishID = wishID;
-	}
-	
-	public void setContentID(String contentID){
-		this.contentID = contentID;
-	}
-	
-	public String getUserID(){
-		return userID;
-	}
-	
-	public String getWishID(){
-		return wishID;
-	}
-
-	public String getContentID(){
-		return contentID;
-	}
+	}	
 }
